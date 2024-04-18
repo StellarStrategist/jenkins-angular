@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-npm install -g @angular/cli
-
 ng serve &
 sleep 1
 echo $! > .pidfile
