@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-ng build --prod
+ng build --configuration production
 ng serve &
 sleep 1
 echo $! > .pidfile
