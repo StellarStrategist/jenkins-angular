@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'npm install -g @angular/cli'
+                sh 'npm link @angular/cli'
             }
         }
         stage('Deliver') {
