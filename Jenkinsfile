@@ -10,6 +10,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh 'npm run ng build --prod'
+                sh 'pwd'
                 sh 'mv /dist /var/www/html'
                 sh 'npm run ng serve'
 
