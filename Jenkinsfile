@@ -10,7 +10,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh 'npm run ng build --prod'
-                sh 'mv /var/jenkins_home/workspace/demo-angular-pipeline/dist /var/www/html'
+                sh 'mv /dist /var/www/html'
                 sh 'npm run ng serve'
 
                 //sh 'npm install -g http-server'
