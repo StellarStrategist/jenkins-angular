@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'npm run ng --build configuration --production'
+                sh 'npm run ng --build --prod'
             }
         }
     }
