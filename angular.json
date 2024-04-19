@@ -36,7 +36,6 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/my-angular-app",
               "budgets": [
                 {
                   "type": "initial",
