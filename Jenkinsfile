@@ -9,11 +9,11 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'npm run ng build'
-                sh 'npm run ng serve'
-
-                //sh 'npm install -g http-server'
-                //sh 'http-server dist -p 4200'
+                sh 'chmod -R +rwx ./jenkins/scripts/deliver.sh'
+                sh 'chmod -R +rwx ./jenkins/scripts/kill.sh'
+                sh './jenkins/scripts/deliver.sh'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                sh './jenkins/scripts/kill.sh'
             }
         }
     }
